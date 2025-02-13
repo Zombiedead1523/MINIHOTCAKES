@@ -1,0 +1,320 @@
+/* Estilo General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff8e1;
+    color: #5d4037;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Header */
+header {
+    background-color: #ff6347;
+    /* Color tomate */
+    text-align: center;
+    padding: 20px;
+    color: white;
+    border-radius: 0 0 20px 20px;
+    /* Bordes redondeados inferiores */
+}
+
+header nav a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header nav a:hover {
+    color: #ff6f00;
+    transform: scale(1.1);
+    /* Efecto de agrandamiento */
+}
+
+/* Secciones */
+section {
+    padding: 20px;
+    margin: 10px auto;
+    max-width: 100%;
+    text-align: center;
+    font-style: italic;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #bf360c;
+}
+
+/* Galería */
+.gallery {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    /* Inicialmente invisibles */
+    transform: translateY(20px);
+    /* Comienza desplazada */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Clase para activar la animación */
+.gallery img.show {
+    opacity: 1;
+    transform: translateY(0);
+    /* Se mueve a su posición original */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #d7ccc8;
+    color: #5d4037;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Botones */
+button {
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffdd00;
+    /* Tono más oscuro */
+    transform: scale(1.1);
+    /* Efecto de agrandamiento */
+}
+
+
+
+
+
+
+/* Toppings */
+
+#productos h3 {
+    font-size: 2em;
+    color: #bf360c;
+    text-align: center;
+}
+
+#toppings h3 {
+    font-size: 2em;
+    color: #bf360c;
+    text-align: center;
+}
+
+#toppings h4 {
+    margin-top: 20px;
+    font-size: 1.4em;
+    color: #333;
+}
+
+#toppings ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 10px;
+}
+
+#toppings ul li {
+    background-color: #e4e4e4;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#toppings ul li:hover {
+    background-color: #ff6347;
+    transform: scale(1.05);
+    color: white;
+}
+
+
+/* Animación al cargar los toppings */
+#toppings ul li {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 2s forwards;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 5;
+        transform: translateY(0);
+    }
+}
+
+#productos ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: grid;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+#productos ul li {
+    background-color: #e4e4e4;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#productos ul li:hover {
+    background-color: #ff6347;
+    transform: scale(1.05);
+    color: white;
+}
+
+
+/* Animación al cargar los toppings */
+#productos ul li {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 2s forwards;
+}
+
+
+/* Estilo general para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Estilo para el encabezado */
+table thead {
+    background-color: #0d57c7;
+    color: white;
+}
+
+table thead th {
+    padding: 12px 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Estilo para las filas */
+table tbody tr {
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.2s ease;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilo para las celdas */
+table tbody td {
+    padding: 12px 15px;
+    color: #333;
+}
+
+/* Alternar colores para filas impares */
+table tbody tr:nth-child(odd) {
+    background-color: #f7f7f7;
+}
+
+/* Bordes redondeados para las esquinas de la tabla */
+table tbody tr:last-child {
+    border-bottom: none;
+}
+
+/* Estilo para centrar el video */
+video {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    /* Ajusta al 100% del contenedor */
+    height: auto;
+    /* Mantiene la relación de aspecto */
+}
+
+/* Estilos de la galería */
+/* Estilos de la galería */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 200px;
+    /* Ajustamos la altura para que todas las imágenes tengan el mismo tamaño */
+    object-fit: cover;
+    /* Mantiene la relación de aspecto, recortando si es necesario */
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo para el lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+#imagenEspecifica{
+    max-width: 30%;
+    max-height: 30%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
